@@ -90,6 +90,12 @@ export default {
         pickedSprite = vm.sprites[0];
       }
 
+      if (pickedSprite.name === "Load Custom Sprite") {
+        vm.$emit('load-custom-sprite', true);
+      } else {
+        vm.$emit('load-custom-sprite', false);
+      }
+
       while (pickedSprite.file === null) {
         pickedSprite =
           vm.sprites[Math.floor(Math.random() * vm.sprites.length)];
