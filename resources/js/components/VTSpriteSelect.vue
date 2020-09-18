@@ -92,6 +92,7 @@ export default {
 
       if (pickedSprite.name === "Load Custom Sprite") {
         vm.$emit('load-custom-sprite', true);
+        return;
       } else {
         vm.$emit('load-custom-sprite', false);
       }
