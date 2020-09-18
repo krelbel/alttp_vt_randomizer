@@ -1,6 +1,6 @@
 <template>
-  <div class="card-body">
-    <p>
+  <div class="row">
+    <div class="col">
       <label class="btn btn-outline-primary btn-file">
         {{ $t("rom.settings.sprite_file_select") }}
         <input
@@ -9,8 +9,8 @@
           @change="loadBlob"
         />
       </label>
-      <div v-if="fileSelected">{{ fileNameText }}</div>
-    </p>
+    </div>
+    <div class="col" v-if="fileSelected">{{ fileNameText }}</div>
   </div>
 </template>
 
